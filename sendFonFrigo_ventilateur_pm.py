@@ -16,7 +16,7 @@ def charger_objet(chemin_fichier):
     """
     with open(chemin_fichier, "rb") as f:
         objet = pickle.load(f)
-    print(f"Objet chargé depuis {chemin_fichier}")
+    print(f"Objet chargé depuis {chemin_fichier} - ON")
     return objet
 
 transport = PySerialTransport('/dev/ttyUSB0')
