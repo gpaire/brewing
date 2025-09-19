@@ -10,7 +10,7 @@ while true
 do
 	sleep 1
 	TEMP_RELEVEE=$(./acquire.py c7:00)
-	if (( $(echo "$TEMP_RELEVEE < $TEMP_SOUHAITEE" | bc -l) ))
+	if (( $(echo "$TEMP_RELEVEE <= $TEMP_SOUHAITEE" | bc -l) ))
 	then
 		echo "off - $(date) - $TEMP_RELEVEE"
 		./sendFoffFrigo_ventilateur_pm.py
